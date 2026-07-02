@@ -9,13 +9,13 @@
 
 const CONFIG = {
   // Contoh: "123456789012-abcdefghijklmnopqrstuvwxyz.apps.googleusercontent.com"
-  CLIENT_ID: "ISI_CLIENT_ID_ANDA_DI_SINI",
+  CLIENT_ID: "272971243173",
 
   // Contoh: "AIzaSyABCDEFGHIJKLMNOPQRSTUVWXYZ1234567"
-  API_KEY: "ISI_API_KEY_ANDA_DI_SINI",
+  API_KEY: "AIzaSyDBeaetg2lLRCeKR_4_vNdcY1L2A7z7rpI",
 
   // Nama folder utama di Google Drive tempat semua data disimpan
-  ROOT_FOLDER_NAME: "Tanda Terima",
+  ROOT_FOLDER_NAME: "REGISTERJAMINAN",
 
   // Scope minimal: hanya bisa akses file yang DIBUAT oleh aplikasi ini,
   // bukan seluruh isi Google Drive Anda (lebih aman & privat).
