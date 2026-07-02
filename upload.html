@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unggah Tanda Terima</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+    <div class="masthead">
+      <div>
+        <span class="eyebrow-line">Formulir</span>
+        <h1>Unggah Tanda Terima</h1>
+      </div>
+      <span id="authStatus">Menyambungkan…</span>
+    </div>
+    <div class="perforation"></div>
+    <p class="subtitle">Isi formulir berikut secara berurutan. Data akan tersimpan ke folder "Tanda Terima" di Google Drive Anda.</p>
+
+    <div class="card">
+      <div class="step">
+        <div class="step-head">
+          <span class="step-num">1</span>
+          <h3>Nomor / Nama Register</h3>
+        </div>
+        <label class="field-label" for="namaRegister">Contoh: REG24070001</label>
+        <input type="text" id="namaRegister" placeholder="REG24070001" autocomplete="off">
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-num">2</span>
+          <h3>Foto Tanda Terima</h3>
+        </div>
+        <div class="file-drop" id="fileDrop">Klik untuk memilih foto, atau tarik & lepas di sini</div>
+        <input type="file" id="fotoInput" accept="image/*" style="display:none">
+        <img id="fotoPreview" alt="Pratinjau foto tanda terima">
+      </div>
+
+      <div class="step">
+        <div class="step-head">
+          <span class="step-num">3</span>
+          <h3>Tanda Tangan</h3>
+        </div>
+        <div class="sig-wrap">
+          <canvas id="sigCanvas"></canvas>
+        </div>
+        <p class="sig-hint">Gunakan mouse atau jari (di HP) untuk menandatangani di kotak putih di atas.</p>
+        <div class="btn-row">
+          <button class="btn btn-outline" id="btnClearSig" type="button">Hapus Tanda Tangan</button>
+        </div>
+      </div>
+
+      <div class="actions-footer">
+        <span class="footer-note">Langkah terakhir</span>
+        <button class="btn btn-stamp" id="btnSimpan" type="button" disabled>Simpan</button>
+      </div>
+    </div>
+
+    <div class="status-box" id="statusBox"></div>
+
+    <a class="back-link" href="index.html">← Kembali ke Beranda</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/drive.js"></script>
+  <script src="js/upload.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+</body>
+</html>

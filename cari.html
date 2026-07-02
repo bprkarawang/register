@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cari Tanda Terima</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+    <div class="masthead">
+      <div>
+        <span class="eyebrow-line">Pencarian</span>
+        <h1>Cari Tanda Terima</h1>
+      </div>
+      <span id="authStatus">Menyambungkan…</span>
+    </div>
+    <div class="perforation"></div>
+    <p class="subtitle">Masukkan nomor register untuk menampilkan foto dan tanda tangan yang tersimpan.</p>
+
+    <div class="card">
+      <div class="step">
+        <div class="step-head">
+          <span class="step-num">1</span>
+          <h3>Nomor / Nama Register</h3>
+        </div>
+        <label class="field-label" for="namaCari">Contoh: REG24070001</label>
+        <input type="text" id="namaCari" placeholder="REG24070001" autocomplete="off">
+      </div>
+      <div class="actions-footer">
+        <span class="footer-note">Tekan Enter juga bisa</span>
+        <button class="btn btn-stamp" id="btnCari" type="button">Cari</button>
+      </div>
+    </div>
+
+    <div class="status-box" id="statusBox"></div>
+
+    <div class="result-card" id="resultCard" style="display:none;">
+      <div class="step-head" style="margin-bottom:0;">
+        <span class="step-num">✓</span>
+        <h3 id="resultTitle">Ditemukan</h3>
+      </div>
+      <div class="result-grid">
+        <div class="result-item">
+          <img id="fotoImg" alt="Foto tanda terima">
+          <div class="result-label">
+            <span>foto.jpg</span>
+            <span>
+              <a id="fotoLihat" href="#" target="_blank" rel="noopener">Lihat</a> ·
+              <a id="fotoDownload" href="#" target="_blank" rel="noopener">Unduh</a>
+            </span>
+          </div>
+        </div>
+        <div class="result-item">
+          <img id="ttdImg" alt="Tanda tangan">
+          <div class="result-label">
+            <span>ttd.png</span>
+            <span>
+              <a id="ttdLihat" href="#" target="_blank" rel="noopener">Lihat</a> ·
+              <a id="ttdDownload" href="#" target="_blank" rel="noopener">Unduh</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="back-link" href="index.html">← Kembali ke Beranda</a>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/drive.js"></script>
+  <script src="js/cari.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js" onload="gapiLoaded()"></script>
+  <script async defer src="https://accounts.google.com/gsi/client" onload="gisLoaded()"></script>
+</body>
+</html>
